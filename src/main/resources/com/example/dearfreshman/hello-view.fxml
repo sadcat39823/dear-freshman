@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="root"
+           xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.dearfreshman.HelloController"
+           prefWidth="1100"
+           prefHeight="720"
+           minWidth="900"
+           minHeight="650"
+           styleClass="app-root"
+           stylesheets="@dear-freshman.css">
+
+    <ImageView fx:id="gameBackground"
+               fitWidth="1100"
+               fitHeight="720"
+               preserveRatio="false"
+               mouseTransparent="true"/>
+
+    <StackPane fx:id="mainMenuPane"
+               styleClass="main-menu-root">
+
+        <ImageView fx:id="menuBackground"
+                   fitWidth="1100"
+                   fitHeight="720"
+                   preserveRatio="false"
+                   mouseTransparent="true"/>
+
+        <StackPane styleClass="main-menu-overlay"
+                   mouseTransparent="true"/>
+
+        <VBox alignment="CENTER"
+              spacing="18"
+              styleClass="main-menu-content">
+
+            <Label text="DEAR FRESHMAN"
+                   styleClass="main-menu-title"/>
+
+            <Label text="A COLLECTION OF COLLEGE MEMORIES"
+                   styleClass="main-menu-subtitle"/>
+
+            <Label text="✦  ─────────────  ✦"
+                   styleClass="main-menu-divider"/>
+
+            <Button text="NEW GAME"
+                    onAction="#handleNewGame"
+                    styleClass="learn-more, main-menu-button"/>
+
+            <Button text="CONTINUE"
+                    onAction="#handleContinue"
+                    styleClass="learn-more, main-menu-button"/>
+
+            <Button text="EXIT"
+                    onAction="#handleExit"
+                    styleClass="learn-more, main-menu-button"/>
+
+            <Label text="EVERY CHOICE BECOMES A MEMORY"
+                   styleClass="main-menu-footer"/>
+
+        </VBox>
+    </StackPane>
+
+    <BorderPane fx:id="gamePane"
+                styleClass="game-root"
+                visible="false"
+                managed="false">
+
+        <center>
+            <HBox spacing="22"
+                  styleClass="game-layout">
+
+                <VBox spacing="18"
+                      prefWidth="235"
+                      minWidth="210"
+                      maxWidth="250"
+                      styleClass="stats-sidebar">
+
+                    <Label text="DEAR FRESHMAN"
+                           styleClass="sidebar-title"/>
+
+                    <Label text="YOUR STATUS"
+                           styleClass="sidebar-heading"/>
+
+                    <Label fx:id="statsLabel"
+                           text="ENERGY 100"
+                           wrapText="true"
+                           styleClass="stats-label"/>
+
+                    <Label text="CURRENT TIME"
+                           styleClass="sidebar-heading"/>
+
+                    <Label fx:id="timeLabel"
+                           text="DAY 1  •  08:00 AM  •  MORNING"
+                           wrapText="true"
+                           styleClass="time-label"/>
+
+                    <Button text="ADVANCE TIME →"
+                            onAction="#handleAdvanceTime"
+                            maxWidth="Infinity"
+                            styleClass="advance-time-button"/>
+
+                    <Label text="CURRENT MEMORY"
+                           styleClass="sidebar-heading"/>
+
+                    <Label fx:id="sceneNumberLabel"
+                           text="CHAPTER 01  /  ENTRY 001"
+                           wrapText="true"
+                           styleClass="scene-number"/>
+
+                </VBox>
+
+                <BorderPane styleClass="story-panel"
+                            minWidth="0"
+                            HBox.hgrow="ALWAYS">
+
+                    <center>
+                        <StackPane fx:id="storyArea"
+                                   minWidth="0"
+                                   minHeight="360"
+                                   prefHeight="440"
+                                   maxHeight="440"
+                                   styleClass="story-area">
+
+                            <ImageView fx:id="sceneBackground"
+                                       fitWidth="800"
+                                       fitHeight="440"
+                                       preserveRatio="false"
+                                       smooth="true"
+                                       mouseTransparent="true"/>
+
+                            <ImageView fx:id="characterImage"
+                                       fitWidth="360"
+                                       fitHeight="440"
+                                       preserveRatio="true"
+                                       smooth="true"
+                                       visible="false"
+                                       mouseTransparent="true"/>
+
+                        </StackPane>
+                    </center>
+
+                    <bottom>
+                        <VBox spacing="10"
+                              fillWidth="true"
+                              minHeight="0"
+                              styleClass="dialogue-container">
+
+                            <Label fx:id="sceneTitleLabel"
+                                   text="A New Beginning"
+                                   wrapText="true"
+                                   styleClass="scene-title"/>
+
+                            <Label fx:id="sceneDescriptionLabel"
+                                   wrapText="true"
+                                   styleClass="scene-description"/>
+
+                            <Label fx:id="speakerLabel"
+                                   text="YOUR JOURNAL"
+                                   wrapText="true"
+                                   styleClass="speaker-label"/>
+
+                            <ScrollPane fx:id="dialogueScroll"
+                                        fitToWidth="true"
+                                        fitToHeight="false"
+                                        prefViewportHeight="75"
+                                        minViewportHeight="45"
+                                        maxHeight="90"
+                                        hbarPolicy="NEVER"
+                                        vbarPolicy="AS_NEEDED"
+                                        pannable="true"
+                                        styleClass="dialogue-scroll">
+
+                                <content>
+                                    <Label fx:id="dialogueLabel"
+                                           text="Welcome to NCST."
+                                           wrapText="true"
+                                           maxWidth="Infinity"
+                                           styleClass="dialogue-text"/>
+                                </content>
+
+                            </ScrollPane>
+
+                            <VBox fx:id="choicesBox"
+                                  spacing="8"
+                                  fillWidth="true"
+                                  minHeight="0"
+                                  styleClass="choices-container"/>
+
+                            <Label fx:id="footerLabel"
+                                   text="EVERY CHOICE COUNTS"
+                                   wrapText="true"
+                                   styleClass="game-footer"/>
+
+                        </VBox>
+                    </bottom>
+
+                </BorderPane>
+
+            </HBox>
+        </center>
+
+    </BorderPane>
+
+</StackPane>

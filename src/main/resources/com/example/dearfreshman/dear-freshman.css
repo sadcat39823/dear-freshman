@@ -1,0 +1,535 @@
+.root {
+    -fx-font-family: "Georgia";
+    -fx-background-color: #F8EDF0;
+    -fx-text-fill: #604B52;
+}
+
+.game-root {
+    -fx-background-color: #F8EDF0;
+}
+
+.game-layout {
+    -fx-padding: 22;
+    -fx-spacing: 22;
+    -fx-background-color: transparent;
+    -fx-alignment: TOP_LEFT;
+}
+
+.game-footer {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 10px;
+    -fx-text-fill: #B18C99;
+    -fx-wrap-text: true;
+    -fx-padding: 4 0 0 0;
+}
+
+.top-header {
+    -fx-background-color: #F4E1E7;
+    -fx-padding: 16 24;
+    -fx-spacing: 8;
+    -fx-alignment: center;
+    -fx-border-color: #E8C8D2;
+    -fx-border-width: 0 0 1 0;
+}
+
+.game-title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #805967;
+}
+
+.subtitle-label {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+    -fx-text-fill: #A17C8A;
+}
+
+.bottom-note {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 11px;
+    -fx-text-fill: #A17C8A;
+    -fx-alignment: center;
+}
+
+.main-menu-root {
+    -fx-background-color: #F8EDF0;
+    -fx-alignment: center;
+}
+
+.main-menu-overlay {
+    -fx-background-color: rgba(72, 43, 54, 0.35);
+    -fx-alignment: center;
+    -fx-padding: 32;
+}
+
+.main-menu-content {
+    -fx-background-color: rgba(255, 247, 249, 0.96);
+    -fx-padding: 42 54;
+    -fx-spacing: 18;
+    -fx-alignment: center;
+    -fx-max-width: 540;
+    -fx-border-color: #E6C4CF;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(94, 57, 69, 0.18),
+            24,
+            0.18,
+            0,
+            8
+    );
+}
+
+.main-menu-title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 44px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #805967;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.main-menu-subtitle {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 15px;
+    -fx-font-style: italic;
+    -fx-text-fill: #A17C8A;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.main-menu-divider {
+    -fx-background-color: #DDB7C4;
+    -fx-pref-height: 1;
+    -fx-max-height: 1;
+    -fx-min-height: 1;
+}
+
+.main-menu-footer {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+    -fx-text-fill: #B18C99;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.main-menu-button {
+    -fx-pref-width: 240;
+    -fx-min-height: 42;
+    -fx-font-size: 14px;
+    -fx-letter-spacing: 1px;
+    -fx-background-color: #F0D8E0;
+    -fx-border-color: #D9B1BE;
+    -fx-text-fill: #805967;
+}
+
+.main-menu-button:hover {
+    -fx-background-color: #E7C3CF;
+    -fx-border-color: #C99BAA;
+}
+
+.button {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-text-fill: #805967;
+    -fx-background-color: #F5E0E7;
+    -fx-border-color: #DDB7C4;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 10 18;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(115, 74, 88, 0.10),
+            4,
+            0.1,
+            0,
+            2
+    );
+}
+
+.button:hover {
+    -fx-background-color: #EED0DA;
+    -fx-border-color: #C99BAA;
+    -fx-text-fill: #684451;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(115, 74, 88, 0.18),
+            7,
+            0.15,
+            0,
+            3
+    );
+}
+
+.button:pressed {
+    -fx-background-color: #E2BDCA;
+    -fx-effect: none;
+    -fx-translate-y: 1;
+}
+
+.button:focused {
+    -fx-border-color: #B98698;
+    -fx-border-width: 1.5;
+}
+
+.button:disabled {
+    -fx-opacity: 0.48;
+    -fx-cursor: default;
+    -fx-effect: none;
+}
+
+.button.learn-more {
+    -fx-background-color: #EBCBD5;
+    -fx-border-color: #D6AAB8;
+    -fx-text-fill: #704B58;
+    -fx-font-weight: bold;
+}
+
+.button.learn-more:hover {
+    -fx-background-color: #E2B9C7;
+    -fx-border-color: #C795A5;
+}
+
+.button.learn-more:pressed {
+    -fx-background-color: #D8A9B9;
+}
+
+.button.learn-more:disabled {
+    -fx-opacity: 0.48;
+}
+
+.stats-sidebar {
+    -fx-background-color: #F4E3E9;
+    -fx-padding: 22 18;
+    -fx-spacing: 12;
+    -fx-pref-width: 235;
+    -fx-min-width: 210;
+    -fx-max-width: 250;
+    -fx-border-color: #E5C7D1;
+    -fx-border-width: 1;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.sidebar-title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #805967;
+}
+
+.sidebar-heading {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9B7180;
+}
+
+.stats-label {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-text-fill: #725560;
+    -fx-line-spacing: 5px;
+    -fx-wrap-text: true;
+}
+
+.scene-number {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+    -fx-text-fill: #A17C8A;
+    -fx-line-spacing: 4px;
+    -fx-wrap-text: true;
+}
+
+.sidebar-divider {
+    -fx-background-color: #DFC0CB;
+    -fx-pref-height: 1;
+    -fx-max-height: 1;
+    -fx-min-height: 1;
+}
+
+.story-panel {
+    -fx-background-color: #FFF9FA;
+    -fx-border-color: #E5C7D1;
+    -fx-border-width: 1;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-min-width: 0;
+}
+
+.story-area {
+    -fx-background-color: #EAD9DF;
+    -fx-min-height: 360;
+    -fx-pref-height: 440;
+    -fx-max-height: 440;
+    -fx-border-color: #E5C7D1;
+    -fx-border-width: 0 0 1 0;
+}
+
+.story-card {
+    -fx-background-color: rgba(255, 248, 250, 0.94);
+    -fx-padding: 24;
+    -fx-spacing: 14;
+    -fx-border-color: #E5C7D1;
+    -fx-border-width: 1;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.scene-title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #805967;
+    -fx-wrap-text: true;
+}
+
+
+.scene-description {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+    -fx-text-fill: #A17C8A;
+    -fx-wrap-text: true;
+}
+
+.memory-label {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+    -fx-text-fill: #B18C99;
+    -fx-wrap-text: true;
+}
+
+.decorative-divider {
+    -fx-background-color: #DFC0CB;
+    -fx-pref-height: 1;
+    -fx-max-height: 1;
+    -fx-min-height: 1;
+}
+
+.dialogue-container {
+    -fx-background-color: #FFF8FA;
+    -fx-padding: 16 24;
+    -fx-spacing: 10;
+    -fx-border-color: #E5C7D1;
+    -fx-border-width: 1 0 0 0;
+    -fx-fill-width: true;
+    -fx-min-height: 0;
+}
+
+.dialogue-panel {
+    -fx-background-color: #FFF8FA;
+    -fx-padding: 16 20;
+    -fx-spacing: 10;
+    -fx-border-color: #E5C7D1;
+    -fx-border-width: 1;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.dialogue-content {
+    -fx-spacing: 10;
+}
+
+.dialogue-text {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 15px;
+    -fx-text-fill: #604B52;
+    -fx-line-spacing: 5px;
+    -fx-wrap-text: true;
+}
+
+.dialogue-label {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B17E91;
+    -fx-wrap-text: true;
+}
+
+.speaker-label {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #A16F82;
+}
+
+.choices-container {
+    -fx-spacing: 10;
+    -fx-padding: 8 0 8 0;
+    -fx-fill-width: true;
+    -fx-min-height: 0;
+}
+
+.choices-container .button {
+    -fx-min-width: 0;
+    -fx-max-width: Infinity;
+    -fx-min-height: 42px;
+    -fx-wrap-text: true;
+}
+
+.story-choice {
+    -fx-min-width: 0;
+    -fx-max-width: Infinity;
+    -fx-min-height: 42px;
+    -fx-alignment: center-left;
+    -fx-text-alignment: left;
+    -fx-wrap-text: true;
+    -fx-padding: 12 16;
+    -fx-background-color: #FFF7F9;
+    -fx-border-color: #E5C7D1;
+    -fx-border-width: 1;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+}
+
+.story-choice:hover {
+    -fx-background-color: #F7E5EB;
+    -fx-border-color: #D4A8B7;
+}
+
+.story-choice:pressed {
+    -fx-background-color: #EED0DA;
+}
+
+.journal-input {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 14px;
+    -fx-text-fill: #604B52;
+    -fx-prompt-text-fill: #B99AA5;
+    -fx-background-color: #FFF9FA;
+    -fx-border-color: #DDB7C4;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 10 12;
+}
+
+.journal-input:focused {
+    -fx-border-color: #B98698;
+    -fx-background-color: #FFFFFF;
+}
+
+.error-message {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+    -fx-text-fill: #A64F68;
+    -fx-wrap-text: true;
+}
+
+.time-label {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #986B7B;
+    -fx-wrap-text: true;
+    -fx-padding: 4px 0px 8px 0px;
+}
+
+.time-morning {
+    -fx-text-fill: #B17E54;
+}
+
+.time-day {
+    -fx-text-fill: #A88A45;
+}
+
+.time-afternoon {
+    -fx-text-fill: #B77A70;
+}
+
+.time-night {
+    -fx-text-fill: #796B99;
+}
+
+.advance-time-button {
+    -fx-background-color: #E8D5DF;
+    -fx-text-fill: #68495B;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 9px 14px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.advance-time-button:hover {
+    -fx-background-color: #DCC0D0;
+}
+
+.advance-time-button:pressed {
+    -fx-background-color: #CDAFC1;
+}
+
+.label {
+    -fx-wrap-text: true;
+}
+
+.text-area,
+.text-field {
+    -fx-font-family: "Georgia";
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.button:focused,
+.text-field:focused {
+    -fx-focus-color: #C99BAA;
+    -fx-faint-focus-color: rgba(201, 155, 170, 0.18);
+}
+
+.dialogue-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-fit-to-width: true;
+}
+
+.dialogue-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.dialogue-scroll > .scroll-bar:vertical {
+    -fx-background-color: #F4E3E9;
+    -fx-pref-width: 8px;
+}
+
+.dialogue-scroll > .scroll-bar:vertical > .thumb {
+    -fx-background-color: #D4A8B7;
+    -fx-background-radius: 4px;
+}
+
+.dialogue-scroll > .scroll-bar:vertical > .track {
+    -fx-background-color: #F8EDF0;
+}
+
+.dialogue-scroll > .scroll-bar:vertical > .increment-button,
+.dialogue-scroll > .scroll-bar:vertical > .decrement-button {
+    -fx-pref-height: 0;
+    -fx-padding: 0;
+}
+
+.dialogue-scroll .dialogue-text {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 15px;
+    -fx-text-fill: #604B52;
+    -fx-line-spacing: 5px;
+    -fx-wrap-text: true;
+    -fx-padding: 4 8 4 2;
+}
